@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="scene2" prefHeight="864.0" prefWidth="1536.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.pingpong.SceneController2">
+   <children>
+      <!-- Фоновое изображение игры -->
+      <ImageView fx:id="background" fitHeight="864" fitWidth="1536" preserveRatio="true">
+         <image>
+            <Image url="@main.png" />
+         </image>
+         <!-- Привязка фона к границам AnchorPane -->
+         <AnchorPane.topAnchor>0.0</AnchorPane.topAnchor>
+         <AnchorPane.bottomAnchor>0.0</AnchorPane.bottomAnchor>
+         <AnchorPane.leftAnchor>0.0</AnchorPane.leftAnchor>
+         <AnchorPane.rightAnchor>0.0</AnchorPane.rightAnchor>
+      </ImageView>
+      <!-- Левая ракетка -->
+      <ImageView fx:id="paddle1" fitHeight="200.0" fitWidth="45.0" layoutY="332.0">
+         <image>
+            <Image url="@paddle.png" />
+         </image>
+      </ImageView>
+      <!-- Правая ракетка -->
+      <ImageView fx:id="paddle2" fitHeight="200.0" fitWidth="45.0" layoutX="1491.0" layoutY="332.0" onKeyPressed="#initialize">
+         <image>
+            <Image url="@paddle.png" />
+         </image>
+      </ImageView>
+      <!-- Мячик -->
+      <ImageView fx:id="ball" fitHeight="60.0" fitWidth="60.0" layoutX="738.0" layoutY="394.0">
+         <image>
+            <Image url="@ball.png" />
+         </image>
+      </ImageView>
+      <!-- очки игрока 1 -->
+      <Label fx:id="frsplScore" layoutX="367.0" layoutY="21.0" prefHeight="43.0" prefWidth="53.0" text="0" textFill="#1c3c67">
+         <font>
+            <Font size="64.0" />
+         </font></Label>
+      <!-- очки игрока 2 -->
+      <Label fx:id="scndplScore" layoutX="1112.0" layoutY="21.0" prefHeight="43.0" prefWidth="53.0" text="0" textFill="#1c3c67">
+         <font>
+            <Font size="64.0" />
+         </font></Label>
+   </children>
+</AnchorPane>

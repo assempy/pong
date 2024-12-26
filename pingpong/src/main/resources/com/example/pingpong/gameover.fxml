@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="864.0" prefWidth="1536.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.pingpong.SceneController3">
+   <children>
+      <!-- Фоновое изображение -->
+      <ImageView fitHeight="864" fitWidth="1536" preserveRatio="true">
+         <image>
+            <Image url="@gameover.png" />
+         </image>
+         <!-- Привязка фона к границам AnchorPane -->
+         <AnchorPane.topAnchor>0.0</AnchorPane.topAnchor>
+         <AnchorPane.bottomAnchor>0.0</AnchorPane.bottomAnchor>
+         <AnchorPane.leftAnchor>0.0</AnchorPane.leftAnchor>
+         <AnchorPane.rightAnchor>0.0</AnchorPane.rightAnchor>
+      </ImageView>
+
+      <!-- Картинка победителя (по умолчанию Player 1) -->
+      <ImageView fx:id="Winner1" fitHeight="79.0" fitWidth="470.0" layoutX="533.0" layoutY="300.0">
+         <image>
+            <Image url="@pl1.png" />
+         </image>
+      </ImageView>
+
+      <!-- Картинка для второго игрока, скрыта по умолчанию -->
+      <ImageView fx:id="Winner2" fitHeight="79.0" fitWidth="470.0" layoutX="533.0" layoutY="300.0" visible="false">
+         <image>
+            <Image url="@pl2.png" />
+         </image>
+      </ImageView>
+   </children>
+</AnchorPane>
